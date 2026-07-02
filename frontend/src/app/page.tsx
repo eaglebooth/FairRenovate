@@ -414,14 +414,14 @@ export default function Home() {
       <section className="page-section" id="why-choose-us">
         <div className="section-header">
           <h2>Here's What Sets Us Apart from Standard Contracting</h2>
-          <p>Traditional agreements lead to thợ trốn, paint disputes, or payment arguments. GenLayer automates milestones based on subjective quality audits.</p>
+          <p>Traditional agreements lead to contractor abandonment, paint disputes, or payment arguments. GenLayer automates milestones based on subjective quality audits.</p>
         </div>
         <div className="why-choose-us-layout">
           <div className="why-column">
             <div className="why-card">
               <div className="why-icon"><Shield size={20} /></div>
               <h3>1. Escrow Lock Safety</h3>
-              <p>Homeowners lock milestone budgets securely on-chain. Thợ thầu yên tâm làm việc mà không lo chủ nhà quỵt tiền.</p>
+              <p>Homeowners lock milestone budgets securely on-chain. Contractors work with peace of mind without worrying about payment defaults.</p>
             </div>
             <div className="why-card">
               <div className="why-icon"><Cpu size={20} /></div>
