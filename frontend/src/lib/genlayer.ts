@@ -2,6 +2,12 @@ import { createClient } from "genlayer-js";
 import { localnet, studionet, testnetAsimov, testnetBradbury } from "genlayer-js/chains";
 import { ExecutionResult, TransactionStatus } from "genlayer-js/types";
 
+declare global {
+  interface Window {
+    ethereum?: any;
+  }
+}
+
 // Define supported chains
 const chains = {
   localnet,
