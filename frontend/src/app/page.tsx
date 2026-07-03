@@ -352,12 +352,12 @@ export default function Home() {
             <a href="#sandbox" className="nav-link">Contract Workspace</a>
           </nav>
           <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-            <div style={{ display: "flex", alignItems: "center" }}>
+            <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
               <input 
                 type="text" 
                 className="form-input" 
                 style={{ 
-                  width: "360px", 
+                  width: "300px", 
                   background: "rgba(255, 255, 255, 0.08)", 
                   border: "1px solid rgba(255, 255, 255, 0.12)", 
                   color: "#ffffff", 
@@ -369,6 +369,19 @@ export default function Home() {
                 onChange={(e) => handleAddressChange(e.target.value)}
                 placeholder="Contract Address (starts with 0x...)"
               />
+              <button 
+                className="btn-wallet-blue" 
+                style={{ 
+                  padding: "0.35rem 0.85rem", 
+                  fontSize: "0.75rem", 
+                  background: "var(--primary)", 
+                  borderColor: "var(--primary)" 
+                }} 
+                onClick={loadContractState} 
+                disabled={loading || !contractAddress || contractAddress === ZERO_ADDRESS}
+              >
+                <RefreshCw size={10} className={loading ? "animate-spin" : ""} /> Sync State ({syncStatus})
+              </button>
             </div>
 
             {walletAccount ? (
