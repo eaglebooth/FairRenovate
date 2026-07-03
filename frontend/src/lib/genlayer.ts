@@ -31,7 +31,7 @@ const customRpcEndpoint = getEnvVal("NEXT_PUBLIC_GENLAYER_RPC", "");
 
 // Create the GenLayer JS Client
 const genClient = createClient({
-  chain: chains[defaultChain] ?? testnetAsimov,
+  chain: chains[defaultChain] ?? studionet,
   ...(customRpcEndpoint ? { endpoint: customRpcEndpoint } : {})
 });
 
@@ -105,7 +105,7 @@ export async function writeContract(
 
     // Initialize custom write client for current session account
     const sessionWriteClient = createClient({
-      chain: chains[defaultChain] ?? testnetAsimov,
+      chain: chains[defaultChain] ?? studionet,
       ...(customRpcEndpoint ? { endpoint: customRpcEndpoint } : {}),
       provider: window.ethereum,
       account: activeAccount as `0x${string}`
