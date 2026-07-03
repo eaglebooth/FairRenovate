@@ -375,12 +375,13 @@ export default function Home() {
                   padding: "0.35rem 0.85rem", 
                   fontSize: "0.75rem", 
                   background: "var(--primary)", 
-                  borderColor: "var(--primary)" 
+                  borderColor: "var(--primary)",
+                  whiteSpace: "nowrap"
                 }} 
                 onClick={loadContractState} 
                 disabled={loading || !contractAddress || contractAddress === ZERO_ADDRESS}
               >
-                <RefreshCw size={10} className={loading ? "animate-spin" : ""} /> Sync State ({syncStatus})
+                <RefreshCw size={10} className={loading ? "animate-spin" : ""} /> {loading ? "Syncing..." : "Sync"}
               </button>
             </div>
 
